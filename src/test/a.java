@@ -1,5 +1,6 @@
 package test;
 
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,15 +8,28 @@ class a {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int i;
+//		int i;
 		Random rnd = new Random();
 		Scanner sc = new Scanner(System.in);
-		i = sc.nextInt();
+//		i = sc.nextInt();
 		
-		for (int x =0 ; x<20 ; x++ ) {
-			System.out.println((i-5)+rnd.nextInt(11));
+		
+//		for (int x =0 ; x<20 ; x++ ) {
 			
-		}
+			//double b = Math.round(rnd.nextDouble()*10);
+			
+//			System.out.println(rnd.nextDouble());
+//			System.out.println(rnd.nextDouble()*10);
+//			
+//			double a = (-1 + rnd.nextInt(3));
+//			System.out.println((-1 + rnd.nextDouble()) * a);
+			
+//			System.out.println(-1 + (rnd.nextDouble()*2));
+			
+//		}
+		System.out.print("주소를 입력하세요: ");
+		String address = sc.nextLine();
+		System.out.println("주소: "+ address);
 		
 		
 		
@@ -65,11 +79,15 @@ class a {
 //		System.out.println("10을 더한 값: " + (x+10));
 //		System.out.println("10을 뺀 값: " + (x-10));
 //		
-//		String x;
+		
+//		System.out.print("성을 입력: ");
+//		String y  = sc.next();
 //		System.out.print("이름을 입력: ");
-//		String x = keyinput.next();
-//		System.out.println(x);
-//		keyinput.close();				
+//		String x;
+//		x = sc.next();
+//		
+//		System.out.println(y+x+"님 안녕하세요");
+//		sc.close();				
 	}
 
 }
