@@ -5,12 +5,43 @@ import java.util.Random;
 import java.util.Scanner;
 
 class a {
-	
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("A를 입력하시오");
+		int sc1 = sc.nextInt();
+		
+		if (sc1 < 0 ) {
+			System.out.println("입력한 값은 음수입니다.");
+		}
+		else if (sc1 % 5 == 0) 
+		{
+			System.out.println("5로 나누어 떨어짐");
+		}
+		else{
+			System.out.println("5로 나누어 떨어지지 않음");
+		}
+		sc.close();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		// TODO Auto-generated method stub
 //		int i;
-		Random rnd = new Random();
-		Scanner sc = new Scanner(System.in);
+//		Random rnd = new Random();
+//		Scanner sc = new Scanner(System.in);
 //		i = sc.nextInt();
 		
 		
@@ -27,11 +58,11 @@ class a {
 //			System.out.println(-1 + (rnd.nextDouble()*2));
 			
 //		}
-		System.out.print("주소를 입력하세요: ");
-		String address = sc.nextLine();
-		System.out.println("주소: "+ address);
-		
-		
+//		System.out.print("주소를 입력하세요: ");
+//		String address = sc.nextLine();
+//		System.out.println("주소: "+ address);
+//		
+//		
 		
 //		Random rnd = new Random();
 //		int n1 = 1 + rnd.nextInt(9);
