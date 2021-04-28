@@ -7,24 +7,57 @@ import java.util.Scanner;
 class a {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("A를 입력하시오");
-		int sc1 = sc.nextInt();
+		System.out.print("정수 A를 입력하시오");
+		int a = sc.nextInt();
+		System.out.print("정수 B를 입력하시오");
+		int b = sc.nextInt();
 		
-		if (sc1 < 0 ) {
-			System.out.println("입력한 값은 음수입니다.");
+		int max = a;
+		if (b>a) {
+			a = b;
+			b = max;
+		
 		}
-		else if (sc1 % 5 == 0) 
-		{
-			System.out.println("5로 나누어 떨어짐");
-		}
-		else{
-			System.out.println("5로 나누어 떨어지지 않음");
-		}
+
+		System.out.println(a);
+		System.out.println(b);
+//		if (sc1 > 0 ) {
+//			if (sc1 % 10 ==0) {
+//				System.out.println("10의 배수입니다");
+//			}
+//			else {
+//				System.out.println("10의 배수가 아닙니다");
+//			}
+//		}
+//		else{
+//			System.out.println("음수임");
+//		}
+		
+//		if (sc1 > 0) {
+//			if (sc1 < 50) {
+//				System.out.println("가");
+//			}
+//			else if ( 50 <= sc1 && sc1 < 60) {
+//				System.out.println("양");
+//			}
+//			else if ( 60 <= sc1 && sc1 < 70) {
+//				System.out.println("미");
+//			}
+//			else if ( 70 <= sc1 && sc1 < 80) {
+//				System.out.println("우");
+//			}
+//			else {
+//				System.out.println("수");
+//			}
+//			
+//		}
+//		else {
+//			System.out.println("잘못된 점수입니다");
+//		}
 		sc.close();
 		
 		
-		
-		
+	
 		
 		
 		
