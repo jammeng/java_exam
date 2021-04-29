@@ -11,16 +11,31 @@ class a {
 		int a = sc.nextInt();
 		System.out.print("정수 B를 입력하시오");
 		int b = sc.nextInt();
+		System.out.print("정수 C를 입력하시오");
+		int c = sc.nextInt();
 		
-		int max = a;
-		if (b>a) {
+		if ( a > b ) {
+			int temp = a;
 			a = b;
-			b = max;
-		
+			b = temp;
 		}
-
+		if ( b > c ) {
+			int temp = b;
+			b = c;
+			c = temp;
+		}
+		if ( a > b) {
+			int temp = a;
+			a = b;
+			b = temp;
+		}
 		System.out.println(a);
 		System.out.println(b);
+		System.out.println(c);
+		
+		
+		
+		
 //		if (sc1 > 0 ) {
 //			if (sc1 % 10 ==0) {
 //				System.out.println("10의 배수입니다");
