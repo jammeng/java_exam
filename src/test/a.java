@@ -7,31 +7,25 @@ import java.util.Scanner;
 class a {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("정수 A를 입력하시오");
-		int a = sc.nextInt();
-		System.out.print("정수 B를 입력하시오");
-		int b = sc.nextInt();
-		System.out.print("정수 C를 입력하시오");
-		int c = sc.nextInt();
 		
-		if ( a > b ) {
-			int temp = a;
-			a = b;
-			b = temp;
+		boolean cnt = true; 
+		while (cnt) {
+			System.out.print("정수를 입력: ");
+			int num = sc.nextInt();
+			
+			if (num>=0)
+				System.out.println("+");
+			else if (num<0)
+				System.out.println("-");
+			
+			System.out.println("계속하시겠습니까?  Yes : 1, No : 0");
+			int stdin = sc.nextInt();
+			
+			if (stdin == 1)
+				continue;
+			else if(stdin == 0)
+				cnt = false;
 		}
-		if ( b > c ) {
-			int temp = b;
-			b = c;
-			c = temp;
-		}
-		if ( a > b) {
-			int temp = a;
-			a = b;
-			b = temp;
-		}
-		System.out.println(a);
-		System.out.println(b);
-		System.out.println(c);
 		
 		
 		
