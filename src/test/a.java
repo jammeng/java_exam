@@ -8,25 +8,14 @@ class a {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		boolean cnt = true; 
-		while (cnt) {
-			System.out.print("정수를 입력: ");
-			int num = sc.nextInt();
-			
-			if (num>=0)
-				System.out.println("+");
-			else if (num<0)
-				System.out.println("-");
-			
-			System.out.println("계속하시겠습니까?  Yes : 1, No : 0");
-			int stdin = sc.nextInt();
-			
-			if (stdin == 1)
-				continue;
-			else if(stdin == 0)
-				cnt = false;
-		}
+		int x;
 		
+		do {
+			System.out.println("입력");
+			x = sc.nextInt();
+			
+		}while(x < 100 || x> 999);
+		System.out.println("값은 "+ x);
 		
 		
 		
