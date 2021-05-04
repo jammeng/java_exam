@@ -1,22 +1,116 @@
 package test;
-
-
 import java.util.Random;
 import java.util.Scanner;
 
 class a {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		Random rnd = new Random();
 		
-		int x;
+		int star = sc.nextInt();
+		int i;
+		for(i = 0; i<star; i++)
+			System.out.print("*");
+			if(i==star && star != 0)
+				System.out.print("\n");
 		
-		do {
-			System.out.println("입력");
-			x = sc.nextInt();
 			
-		}while(x < 100 || x> 999);
-		System.out.println("값은 "+ x);
 		
+		
+		
+		
+//		System.out.print("정수 를 입력하세요. : ");
+//		int inp1 = sc.nextInt();
+//		int i = 0;
+//		for( i = inp1; i>=0; i--)
+//			System.out.println(i);
+//		System.out.println(i);
+//		
+//		
+//		int x;
+//		do {
+//			x = sc.nextInt();
+//		}while(x<=0);
+//		
+//		while(x>=0) {
+//			System.out.println(x--);
+//		}	
+//		System.out.println(x);
+		
+		
+		
+		
+		
+		
+		
+		
+//		System.out.print("정수 를 입력하세요. : ");
+//		int inp1 = sc.nextInt();
+//		
+//		System.out.print("정수 를 입력하세요. : ");
+//		int inp2 = sc.nextInt();
+//		
+//		int min = inp1;
+//		int max = 0;
+//		
+//		if (min < inp2) 
+//			max = inp2;
+//		else {
+//			min = inp2;
+//			max = inp1;
+//		} 
+//	
+//		int i;
+//		for (i = min+1; i<max; i++) {
+//			System.out.println(i);
+//		}
+//		
+		
+		
+		
+		
+//		int collect = 0;
+//		int num = rnd.nextInt(90)+10;
+//		System.out.println(num);
+//		
+//		do {
+//			
+//			System.out.print("예상 숫자를 입력하세요. : ");
+//			int inp = sc.nextInt();
+//			
+//			if (num > inp) {
+//				System.out.println("입력한 수보다 큰 수 입니다");
+//			}
+//			else if(num < inp) {
+//				System.out.println("입력한 수보다 작은 수 입니다");
+//			}
+//			else {
+//				System.out.println("정답입니다");
+//				collect = 1;
+//			}
+//		}while (collect == 0); 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		int x;
+//		
+//		do {
+//			System.out.println("입력");
+//			x = sc.nextInt();
+//			
+//		}while(x < 100 || x> 999);
+//		System.out.println("값은 "+ x);
+//		
 		
 		
 //		if (sc1 > 0 ) {
