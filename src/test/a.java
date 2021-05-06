@@ -6,16 +6,27 @@ class a {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Random rnd = new Random();
+
 		
-		int star = sc.nextInt();
-		int i;
-		for(i = 0; i<star; i++)
-			System.out.print("*");
-			if(i==star && star != 0)
-				System.out.print("\n");
+		String val = "hello";
+		String val2 = new String("hello");
+		//String val3 = "hello";
 		
-			
+		System.out.println(val == val2);
+		System.out.println(val.equals("hello"));
 		
+		boolean res = val.equals(val2);
+		System.out.println(res); 
+		
+//		int star = sc.nextInt();
+//		int i;
+//		for(i = 0; i<star; i++)
+//			System.out.print("*");
+//			if(i==star && star != 0)
+//				System.out.print("\n");
+//		
+//			
+//		
 		
 		
 		
