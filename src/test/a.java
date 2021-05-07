@@ -6,17 +6,69 @@ class a {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Random rnd = new Random();
-
 		
-		String val = "hello";
-		String val2 = new String("hello");
-		//String val3 = "hello";
+		boolean tf = false;
 		
-		System.out.println(val == val2);
-		System.out.println(val.equals("hello"));
+		while(tf == false) {
+			System.out.print("몇개를 표시할까요? : ");
+			int num = sc.nextInt();
+			String newnum = Integer.toString(num);
+			
+			if (num<=0)
+				System.out.println("양의 정수를 입력 하세요");
+			else {
+				System.out.println(newnum.length());
+				tf = true;
+			}
+				
+			
+		}
 		
-		boolean res = val.equals(val2);
-		System.out.println(res); 
+		
+		
+		
+//		for (int i = 1 ; i <= num; i ++) {
+//			if (i % 2 != 0)
+//				System.out.print("*");
+//			if (i % 2 == 0)
+//				System.out.print("+");
+//		}
+//			
+		
+//		System.out.print("몇개를 표시할까요? : ");
+//		int num = sc.nextInt();
+//		int cnt = 0;
+//		do {
+//			if (num < 1)
+//				break;
+//			
+//			cnt++;
+//			if (cnt % 2 != 0)
+//				System.out.print("*");
+//			if (cnt % 2 == 0)
+//				System.out.print("+");
+//		}while(cnt != num);
+		
+		
+		
+		
+		
+		
+		sc.close();
+		
+		
+		
+		
+		
+//		String val = "hello";
+//		String val2 = new String("hello");
+//		//String val3 = "hello";
+//		
+//		System.out.println(val == val2);
+//		System.out.println(val.equals("hello"));
+//		
+//		boolean res = val.equals(val2);
+//		System.out.println(res); 
 		
 //		int star = sc.nextInt();
 //		int i;
