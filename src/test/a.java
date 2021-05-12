@@ -6,24 +6,128 @@ class a {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Random rnd = new Random();
+		int num = 0;
+		do{
+			System.out.print("월 입력: ");
+			num = sc.nextInt();	
+		}while(num > 12 || num <= 0);
 		
-		boolean tf = false;
-		
-		while(tf == false) {
-			System.out.print("몇개를 표시할까요? : ");
-			int num = sc.nextInt();
-			String newnum = Integer.toString(num);
-			
-			if (num<=0)
-				System.out.println("양의 정수를 입력 하세요");
-			else {
-				System.out.println(newnum.length());
-				tf = true;
-			}
-				
+		switch (num) {
+		case 3,4,5: {
+			System.out.println("봄");
+		}
+		case 6,7,8: {
+			System.out.println("여름");
 			
 		}
+		case 9,10,11: {
+			System.out.println("가을");
+		}
+		case 12,1,2: {
+			System.out.println("겨울");
+		}
+		}
 		
+		
+//		System.out.print("개수: ");
+//		int num = sc.nextInt();
+//		
+//		for(int i = 1; i<=num; i++) {
+//			System.out.print("*");
+//			if (i % 5 == 0)
+//				System.out.println("");
+//		}
+//		
+				
+//		int min = 0;
+//		int max = 0;
+//		int temp = 0;
+//		
+//		System.out.print("최소값: ");
+//		min = sc.nextInt();
+//		System.out.print("최대값: ");
+//		max = sc.nextInt();
+//		System.out.print("증가값: ");
+//		temp = sc.nextInt();
+//		
+//		System.out.println("신장 | 표준체중");
+//		for (; min<=max;) {
+//			double avg = (min - 100) * 0.9;
+//			System.out.println(min + " | "+ avg);
+//			min += temp;
+//		}
+		
+		
+		
+		
+		
+//		int cnt = 0;
+//		do {
+//			System.out.print("입력:");
+//			num = sc.nextInt();
+//		}while(num<=0);
+//		
+//		for (int i = 1; i<=num; i++) {
+//			if (i != 1)
+//				System.out.print("+"+ i);
+//			if (i == 1)
+//				System.out.print(i);
+//			cnt += i;
+//		}
+//		System.out.println("="+ cnt);
+//		
+		
+		
+		
+		
+//		for (int i = 0; i <= num; i++)
+//			System.out.println(i);
+//		for (; num >= 0; num--)
+//			System.out.println(num);
+		
+		
+//		for (int i = 0; i<num; i++) {
+//			System.out.print("*");
+//		}
+		
+		
+		
+		
+//		int num = 0;
+//		
+//		do {
+//			System.out.print("양의 정수:");
+//			num = sc.nextInt();
+//		}while( num <= 0);
+//		
+//		int cnt = num-1; 
+//		
+//		while(cnt>=1) {
+//			num *= cnt;
+//			cnt--;
+//		}System.out.println(num);
+//		
+		
+		
+		
+		
+//		int num ;
+//		do {
+//			System.out.println("양의 정수:");
+//			num = sc.nextInt();
+//		}while( num <= 0);
+//		
+//		int cnt = 0;
+//		while(num > 0) {
+//			num /= 10;
+//			cnt ++;
+//		}
+//		System.out.println("입력하신 숫자는 "+cnt+" 자리입니다");
+			
+			
+			
+			
+			
 		
 		
 		

@@ -1,4 +1,4 @@
-package Inheritance.example1;
+ package Inheritance.example1;
 
 class Calculator{
 	

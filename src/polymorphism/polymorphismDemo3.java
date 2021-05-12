@@ -24,7 +24,7 @@ public class polymorphismDemo3 {
 		objI2.A();
 		//objI2.B();
 		
-		//                                                                  objI3.A();
+		//objI3.A();
 		objI3.B();
 		
 		
