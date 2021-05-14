@@ -6,27 +6,69 @@ class a {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Random rnd = new Random();
-		int num = 0;
-		do{
-			System.out.print("월 입력: ");
-			num = sc.nextInt();	
-		}while(num > 12 || num <= 0);
 		
-		switch (num) {
-		case 3,4,5: {
-			System.out.println("봄");
+		
+		
+		int num = 0;
+		
+		System.out.print("단 수 입력: ");
+		num = sc.nextInt();	
+
+		
+		
+		int cnt=1;
+		for (int i = 1; i<=num; i++) {
+			for (int j = 0; j<num-i; j++)
+				System.out.print(" ");
+			for(int z = 1; z<=(i-1)*2+1 ; z++) {
+				if (cnt>=10)
+					cnt %= 10;
+				System.out.print(cnt);	
+			}
+			cnt++;
+			System.out.println("");
 		}
-		case 6,7,8: {
-			System.out.println("여름");
-			
-		}
-		case 9,10,11: {
-			System.out.println("가을");
-		}
-		case 12,1,2: {
-			System.out.println("겨울");
-		}
-		}
+		
+//		for (int i = num-1; i>=0; i--) {
+//			for(int j= 0; )
+//		}
+		
+//		for (int i = 1; i<=num; i++) {
+//			for (int j = 1; j <=i; j++)
+//				System.out.print("*");
+//			System.out.println("");
+//		}
+//		System.out.println("");
+//		
+//		for (int i = 0; i<num; i++) {
+//			for (int j = 0; j<num-i; j++)
+//				System.out.print("*");
+//			System.out.println("");
+//		}
+		
+		
+		
+		
+//		do{
+//			System.out.print("월 입력: ");
+//			num = sc.nextInt();	
+//		}while(num > 12 || num <= 0);
+//		
+//		switch (num) {
+//		case 3,4,5: {
+//			System.out.println("봄");
+//		}
+//		case 6,7,8: {
+//			System.out.println("여름");
+//			
+//		}
+//		case 9,10,11: {
+//			System.out.println("가을");
+//		}
+//		case 12,1,2: {
+//			System.out.println("겨울");
+//		}
+//		}
 		
 		
 //		System.out.print("개수: ");
