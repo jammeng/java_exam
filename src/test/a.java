@@ -13,10 +13,8 @@ class a {
 		
 		System.out.print("단 수 입력: ");
 		num = sc.nextInt();	
-
-		
-		
 		int cnt=1;
+		
 		for (int i = 1; i<=num; i++) {
 			for (int j = 0; j<num-i; j++)
 				System.out.print(" ");
