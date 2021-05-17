@@ -7,25 +7,92 @@ class a {
 		Scanner sc = new Scanner(System.in);
 		Random rnd = new Random();
 		
-		
-		
+		int cnt = 0;
 		int num = 0;
+		int sum = 0;
 		
-		System.out.print("단 수 입력: ");
-		num = sc.nextInt();	
-		int cnt=1;
+		System.out.print("몇개를 입력할까요?: ");
+		cnt = sc.nextInt();
 		
-		for (int i = 1; i<=num; i++) {
-			for (int j = 0; j<num-i; j++)
-				System.out.print(" ");
-			for(int z = 1; z<=(i-1)*2+1 ; z++) {
-				if (cnt>=10)
-					cnt %= 10;
-				System.out.print(cnt);	
+		for (int i = 0; i<cnt; i++) {
+			System.out.print("정수 입력(종료:0): ");
+			num = sc.nextInt();
+			
+			if (num == 0)
+				break;
+			
+			if (num<0) {
+				System.out.println("음수는 더하지 않습니다");
+				continue;
 			}
-			cnt++;
-			System.out.println("");
+			sum += num;
+			
 		}
+		System.out.println("합 : "+ sum);
+		System.out.println("평균 : "+sum/cnt);
+		
+//		System.out.print("몇개를 입력할까요?: ");
+//		cnt = sc.nextInt();
+//		
+//		for (int i = 0; i<cnt; i++) {
+//			System.out.print("정수 입력(종료:0): ");
+//			num = sc.nextInt();
+//			
+//			
+//			if (sum+num>=1000) {
+//				System.out.println("합계가 1000을 넘었습니다. 마지막 값은 무시합니다.");
+////				sum -=num ;
+//				break;
+//			}sum += num;
+//			
+//		} 
+//		System.out.println("합 : "+ sum);
+//		System.out.println("평균 : "+sum/cnt);
+		
+		
+//		int i = 0;
+//		while(i<cnt) {
+//			System.out.print("정수 입력(종료:0): ");
+//			num = sc.nextInt();
+//			sum += num; 
+//			i++;
+//			if (num==0)
+//				break;
+//		}
+//		System.out.println("합계 : "+sum);
+//		System.out.println("평균 : "+(sum/cnt));
+		
+		
+		
+//		int cnt = 0;
+//		do {
+//			System.out.print("정수 입력: ");
+//			num = sc.nextInt();	
+//			for(int i = 1; i <= num; i++)
+//				if (num%i == 0)
+//					cnt++;
+//			if(cnt == 2)
+//				System.out.println(num+"은 소수입니다");
+//			else
+//				System.out.println(num+"은 소수가 아닙니다");
+//		}while(num<=0);
+//		
+		
+		
+		
+//		int cnt=1;
+//		
+//		for (int i = 1; i<=num; i++) {
+//			for (int j = 0; j<num-i; j++)
+//				System.out.print(" ");
+//			for(int z = 1; z<=(i-1)*2+1 ; z++) {
+//				if (cnt>=10)
+//					cnt %= 10;
+//				System.out.print(cnt);	
+//			}
+//			cnt++;
+//			System.out.println("");
+//		}
 		
 //		for (int i = num-1; i>=0; i--) {
 //			for(int j= 0; )
