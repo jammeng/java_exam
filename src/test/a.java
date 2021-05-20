@@ -7,29 +7,52 @@ class a {
 		Scanner sc = new Scanner(System.in);
 		Random rnd = new Random();
 		
-		int cnt = 0;
 		int num = 0;
 		int sum = 0;
+		System.out.println("정수를 더합니다.");
 		
-		System.out.print("몇개를 입력할까요?: ");
-		cnt = sc.nextInt();
-		
-		for (int i = 0; i<cnt; i++) {
-			System.out.print("정수 입력(종료:0): ");
-			num = sc.nextInt();
+		label:
+		for (int i = 1; i<=10; i++) {
+//			if (num == 99999) 
+//				break;
+			System.out.println(i+" 그룹");
 			
-			if (num == 0)
-				break;
-			
-			if (num<0) {
-				System.out.println("음수는 더하지 않습니다");
-				continue;
+			for(int j = 1; j<=5; j++) {
+				
+				System.out.print("정수: ");
+				num = sc.nextInt();
+//				if (num == 88888 || num == 99999)
+//					break;
+				if (num == 88888) 
+					break;
+				if (num == 99999) 
+					break label;
+				
+				sum += num;
 			}
-			sum += num;
-			
 		}
-		System.out.println("합 : "+ sum);
-		System.out.println("평균 : "+sum/cnt);
+		System.out.println("합계는 "+sum+"입니다");
+			
+		
+//		System.out.print("몇개를 입력할까요?: ");
+//		cnt = sc.nextInt();
+//		
+//		for (int i = 0; i<cnt; i++) {
+//			System.out.print("정수 입력(종료:0): ");
+//			num = sc.nextInt();
+//			
+//			if (num == 0)
+//				break;
+//			
+//			if (num<0) {
+//				System.out.println("음수는 더하지 않습니다");
+//				continue;
+//			}
+//			sum += num;
+//			
+//		}
+//		System.out.println("합 : "+ sum);
+//		System.out.println("평균 : "+sum/cnt);
 		
 //		System.out.print("몇개를 입력할까요?: ");
 //		cnt = sc.nextInt();
