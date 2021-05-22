@@ -7,31 +7,85 @@ class a {
 		Scanner sc = new Scanner(System.in);
 		Random rnd = new Random();
 		
-		int num = 0;
-		int sum = 0;
-		System.out.println("정수를 더합니다.");
+		boolean b1 = true;
+		boolean b2 = false;
 		
-		label:
-		for (int i = 1; i<=10; i++) {
-//			if (num == 99999) 
+		b1 = sc.nextBoolean();
+		b2 = sc.nextBoolean();
+		System.out.println(b1);
+		System.out.println(b2);
+		
+//		float x = 0;
+//		double y = 0;
+//		
+//		System.out.print("float 입력: ");
+//		x = sc.nextFloat();
+//		System.out.print("double 입력: ");
+//		y = sc.nextDouble();
+//		
+//		System.out.println(x);
+//		System.out.println(y);
+		
+		
+		
+//		System.out.print("정수를 입력하시오");
+//		int num = sc.nextInt();
+//		
+//		System.out.printf("8진수: %o\n", num);
+//		System.out.printf("16진수: %x", num);
+		
+//		System.out.println("8진수 12는 10진수로 "+012+"입니다");
+//		System.out.println("10진수 12는 10진수로 "+12+"입니다");
+//		System.out.println("16진수 12는 10진수로 "+0x12+"입니다");
+		
+//		int num = 0;
+//		
+//		int rndnum = rnd.nextInt(99);
+//		System.out.println("숫자 맞추기 게임 시작!");
+//		System.out.println("0부터 99사이의 숫자를 맞춰 보세요");
+//		for (int i = 1; i <=7; i++) {
+//			System.out.print("숫자 입력");
+//			num = sc.nextInt();
+//			
+//			if (num == rndnum) {
+//				System.out.println(i+"회만에 맞추셨습니다");
 //				break;
-			System.out.println(i+" 그룹");
-			
-			for(int j = 1; j<=5; j++) {
-				
-				System.out.print("정수: ");
-				num = sc.nextInt();
-//				if (num == 88888 || num == 99999)
+//			}
+//			else if (num != rndnum) {
+//				if (num<rndnum)
+//					System.out.println("더 큰 숫자 입니다");
+//				if (num>rndnum)
+//					System.out.println("더 작은 숫자 입니다");
+//			}
+//			System.out.println(7-i+"회 남았습니다.");
+//				
+//		}
+		
+//		int num = 0;
+//		int sum = 0;
+//		System.out.println("정수를 더합니다.");
+//		
+//		label:
+//		for (int i = 1; i<=10; i++) {
+////			if (num == 99999) 
+////				break;
+//			System.out.println(i+" 그룹");
+//			
+//			for(int j = 1; j<=5; j++) {
+//				
+//				System.out.print("정수: ");
+//				num = sc.nextInt();
+////				if (num == 88888 || num == 99999)
+////					break;
+//				if (num == 88888) 
 //					break;
-				if (num == 88888) 
-					break;
-				if (num == 99999) 
-					break label;
-				
-				sum += num;
-			}
-		}
-		System.out.println("합계는 "+sum+"입니다");
+//				if (num == 99999) 
+//					break label;
+//				
+//				sum += num;
+//			}
+//		}
+//		System.out.println("합계는 "+sum+"입니다");
 			
 		
 //		System.out.print("몇개를 입력할까요?: ");
