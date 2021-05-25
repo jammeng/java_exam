@@ -7,13 +7,42 @@ class a {
 		Scanner sc = new Scanner(System.in);
 		Random rnd = new Random();
 		
-		boolean b1 = true;
-		boolean b2 = false;
+		System.out.println("\"ABC\\n\"");
 		
-		b1 = sc.nextBoolean();
-		b2 = sc.nextBoolean();
-		System.out.println(b1);
-		System.out.println(b2);
+		
+		
+		
+		
+//		float x = 0.0f;
+//		for(float i = 0; i<=1000;i++) {
+//			x = i/1000;
+//			System.out.printf("%3.3f 		%9.7f\n", x, x*x);
+//		}
+		
+//		float x = 0.0f;
+//		for(int i = 0; i <=1000; i++) {
+//			
+//			System.out.printf("%9.7f		%9.7f\n", x, (float)i / 1000);
+//			x += i/1000;
+//		}
+		
+		
+		
+//		int num1 = sc.nextInt();
+//		int num2 = sc.nextInt();
+//		int num3 = sc.nextInt();
+//		
+//		int sum = num1+num2+num3;
+//		System.out.println(sum);
+//		System.out.println(sum/3f);
+		
+//		boolean b1 = true;
+//		boolean b2 = false;
+//		
+//		b1 = sc.nextBoolean();
+//		b2 = sc.nextBoolean();
+//		System.out.println(b1);
+//		System.out.println(b2);
 		
 //		float x = 0;
 //		double y = 0;
