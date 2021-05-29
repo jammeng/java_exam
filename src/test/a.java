@@ -4,15 +4,67 @@ import java.util.Scanner;
 
 class a {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		
+		Scanner input = new Scanner(System.in);
 		Random rnd = new Random();
 		
-		System.out.println("\"ABC\\n\"");
+		System.out.print("요소수: ");
+		int num = input.nextInt();
+		
+		int[] intList = new int[num];
+		
+		for(int z = 0; z<intList.length; z++) {
+			intList[z] = rnd.nextInt(10)+1;  		// 랜덤 값 대입	
+		}
+		System.out.println("");
+		
+		for(int r = 10; r>0; r--) {
+			for(int i = 0; i<num; i++) {
+				if (r <= intList[i]) 
+					System.out.print("* ");
+				if(r > intList[i])
+					System.out.print("  ");
+			}
+			System.out.println("");
+		}
+		for(int i = 0; i <intList.length; i++ ) {
+			System.out.print("- ");	
+		}
+		System.out.println("");
+		for(int i = 0; i <intList.length; i++ ) {
+			System.out.print(intList[i]+" ");	
+		}
+		
+//		double[] doubleList = new double[5];
+//		for (int i = 0; i<doubleList.length; i++) {
+//			doubleList[i] = 1.1 * (i+1);
+//			System.out.printf("doubleList[%d] = ", i);
+//			System.out.printf("%.1f \n", doubleList[i]);
+//		}
+//		
 		
 		
+//		int[] intList = new int[5];
+//		for (int i = 0; i<intList.length; i++) {
+//			intList[i] =  5 - i;
+//			System.out.printf("intList[%d] = ", i);
+//			System.out.println(intList[i]);
+//		}
 		
 		
+//		double[] doubleList = new double[5];
+//		for (int i = 0; i<doubleList.length; i++) {
+//			System.out.printf("doubleList[%d] = ", i);
+//			System.out.println(doubleList[i]);
+//		}
+				
+//		Scanner sc = new Scanner(System.in);
+//		Random rnd = new Random();
+	
+//		System.out.println("\"ABC\\n\"");
+//		
 		
+			
 //		float x = 0.0f;
 //		for(float i = 0; i<=1000;i++) {
 //			x = i/1000;
@@ -154,8 +206,7 @@ class a {
 //		} 
 //		System.out.println("합 : "+ sum);
 //		System.out.println("평균 : "+sum/cnt);
-		
-		
+				
 //		int i = 0;
 //		while(i<cnt) {
 //			System.out.print("정수 입력(종료:0): ");
@@ -166,10 +217,8 @@ class a {
 //				break;
 //		}
 //		System.out.println("합계 : "+sum);
-//		System.out.println("평균 : "+(sum/cnt));
-		
-		
-		
+//		System.out.println("평균 : "+(sum/cnt));		
+				
 //		int cnt = 0;
 //		do {
 //			System.out.print("정수 입력: ");
@@ -183,7 +232,6 @@ class a {
 //				System.out.println(num+"은 소수가 아닙니다");
 //		}while(num<=0);
 //		
-		
 		
 		
 //		int cnt=1;
@@ -216,8 +264,6 @@ class a {
 //				System.out.print("*");
 //			System.out.println("");
 //		}
-		
-		
 		
 		
 //		do{
@@ -270,10 +316,6 @@ class a {
 //			min += temp;
 //		}
 		
-		
-		
-		
-		
 //		int cnt = 0;
 //		do {
 //			System.out.print("입력:");
@@ -289,22 +331,15 @@ class a {
 //		}
 //		System.out.println("="+ cnt);
 //		
-		
-		
-		
-		
+			
 //		for (int i = 0; i <= num; i++)
 //			System.out.println(i);
 //		for (; num >= 0; num--)
 //			System.out.println(num);
 		
-		
 //		for (int i = 0; i<num; i++) {
 //			System.out.print("*");
 //		}
-		
-		
-		
 		
 //		int num = 0;
 //		
@@ -320,10 +355,7 @@ class a {
 //			cnt--;
 //		}System.out.println(num);
 //		
-		
-		
-		
-		
+	
 //		int num ;
 //		do {
 //			System.out.println("양의 정수:");
@@ -336,14 +368,7 @@ class a {
 //			cnt ++;
 //		}
 //		System.out.println("입력하신 숫자는 "+cnt+" 자리입니다");
-			
-			
-			
-			
-			
-		
-		
-		
+				
 //		for (int i = 1 ; i <= num; i ++) {
 //			if (i % 2 != 0)
 //				System.out.print("*");
@@ -365,17 +390,8 @@ class a {
 //			if (cnt % 2 == 0)
 //				System.out.print("+");
 //		}while(cnt != num);
-		
-		
-		
-		
-		
-		
-		sc.close();
-		
-		
-		
-		
+			
+//		sc.close();
 		
 //		String val = "hello";
 //		String val2 = new String("hello");
@@ -526,22 +542,8 @@ class a {
 //		else {
 //			System.out.println("잘못된 점수입니다");
 //		}
-		sc.close();
-		
-		
+//		sc.close();
 	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		// TODO Auto-generated method stub
 //		int i;
