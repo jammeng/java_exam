@@ -8,33 +8,90 @@ class a {
 		Scanner input = new Scanner(System.in);
 		Random rnd = new Random();
 		
-		System.out.print("요소수: ");
+		System.out.print("사람 수: ");
 		int num = input.nextInt();
+		int[] scoreList = new int[num];
+		int sum = 0;
+		double avg = 0.0;
+		int max = 0;
+		int min = 0;
 		
-		int[] intList = new int[num];
+		System.out.println("점수를 입력하세요.");
+		for (int i = 0; i<scoreList.length; i++) {
+			System.out.print(i+1+"번 점수: ");
+			int score = input.nextInt();
+			scoreList[i] = score;
+			
+			sum += scoreList[i];
+			avg = sum/(num*1.0);
+			
+		}
+		System.out.println("합계 : "+ sum);
+		System.out.println("평균 : "+ avg);
 		
-		for(int z = 0; z<intList.length; z++) {
-			intList[z] = rnd.nextInt(10)+1;  		// 랜덤 값 대입	
+		max = scoreList[0];
+		min = scoreList[0];
+		for (int i = 1; i<scoreList.length; i++) {
+			if (scoreList[i] - max > 0)
+				max = scoreList[i];
+			if (scoreList[i] - min < 0)
+				min = scoreList[i];
+			else
+				continue;			
 		}
-		System.out.println("");
+		System.out.println("최대값 : " +max);
+		System.out.println("최대값 : " +min);
 		
-		for(int r = 10; r>0; r--) {
-			for(int i = 0; i<num; i++) {
-				if (r <= intList[i]) 
-					System.out.print("* ");
-				if(r > intList[i])
-					System.out.print("  ");
-			}
-			System.out.println("");
-		}
-		for(int i = 0; i <intList.length; i++ ) {
-			System.out.print("- ");	
-		}
-		System.out.println("");
-		for(int i = 0; i <intList.length; i++ ) {
-			System.out.print(intList[i]+" ");	
-		}
 		
+//		System.out.print("요소수 입력: ");
+//		int num = input.nextInt();
+//		int[] intList = new int[num];
+//		
+//		for(int i = 0; i < intList.length; i++) {
+//			System.out.print("intList["+ i +"] = ");
+//			int num2 = input.nextInt();
+//			intList[i] = num2;
+//		}
+//		System.out.print("intList = { ");
+//		for (int i = 0; i < intList.length; i++) {
+//			if (intList.length-i == 1)
+//				System.out.print(intList[i]+" }");
+//			else
+//				System.out.print(intList[i]+", ");	
+//		}
+		
+		
+//		int[] intlist = {5,4,3,2,1};
+//		for (int i = 0;i <intlist.length; i++)
+//			System.out.println(intlist[i]);
+		
+//		System.out.print("요소수: ");
+//		int num = input.nextInt();
+//		
+//		int[] intList = new int[num];
+//		
+//		for(int z = 0; z<intList.length; z++) {
+//			intList[z] = rnd.nextInt(10)+1;  		// 랜덤 값 대입	
+//		}
+//		System.out.println("");
+//		
+//		for(int r = 10; r>0; r--) {
+//			for(int i = 0; i<num; i++) {
+//				if (r <= intList[i]) 
+//					System.out.print("* ");
+//				if(r > intList[i])
+//					System.out.print("  ");
+//			}
+//			System.out.println("");
+//		}
+//		for(int i = 0; i <intList.length; i++ ) {
+//			System.out.print("- ");	
+//		}
+//		System.out.println("");
+//		for(int i = 0; i <intList.length; i++ ) {
+//			System.out.print(intList[i]+" ");	
+//		}
+//		
 //		double[] doubleList = new double[5];
 //		for (int i = 0; i<doubleList.length; i++) {
 //			doubleList[i] = 1.1 * (i+1);
