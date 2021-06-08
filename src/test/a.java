@@ -4,43 +4,118 @@ import java.util.Scanner;
 
 class a {
 	public static void main(String[] args) {
-		
+
 		Scanner input = new Scanner(System.in);
 		Random rnd = new Random();
 		
-		System.out.print("사람 수: ");
+		System.out.print("요소 수: ");
 		int num = input.nextInt();
-		int[] scoreList = new int[num];
-		int sum = 0;
-		double avg = 0.0;
-		int max = 0;
-		int min = 0;
 		
-		System.out.println("점수를 입력하세요.");
-		for (int i = 0; i<scoreList.length; i++) {
-			System.out.print(i+1+"번 점수: ");
-			int score = input.nextInt();
-			scoreList[i] = score;
-			
-			sum += scoreList[i];
-			avg = sum/(num*1.0);
-			
-		}
-		System.out.println("합계 : "+ sum);
-		System.out.println("평균 : "+ avg);
+		int[] intList = new int[num];
+		intList[0] = rnd.nextInt(10)+1; // intList[0] 랜덤값 대입
 		
-		max = scoreList[0];
-		min = scoreList[0];
-		for (int i = 1; i<scoreList.length; i++) {
-			if (scoreList[i] - max > 0)
-				max = scoreList[i];
-			if (scoreList[i] - min < 0)
-				min = scoreList[i];
-			else
-				continue;			
+		for(int i = 1; i<intList.length; i++) { // i는 1부터 배열 길이 -1 까지
+			intList[i] = rnd.nextInt(10)+1; //intList[1] 랜덤값 대입
+			
+			while(intList[i-1] == intList[i]) {  //intList[i-1]과 intList[i]이 같을때 while문 실행
+				intList[i] = rnd.nextInt(10)+1; // intList[i] 랜덤값 다를때까지 대입
+			}
 		}
-		System.out.println("최대값 : " +max);
-		System.out.println("최대값 : " +min);
+		for(int i = 0; i<intList.length; i++) {
+			System.out.println("intList["+i+"] = "+intList[i]);
+		}
+		
+//		Scanner input = new Scanner(System.in);
+//		Random rnd = new Random();
+//		
+//		System.out.print("요소 수: ");
+//		int num = input.nextInt();
+//		
+//		int[] intList = new int[num];
+//		for(int i = 0; i<intList.length; i++) {
+//			intList[i] = rnd.nextInt(10)+1;
+//			System.out.println("intList["+i+"] = "+intList[i]);
+//		}
+		
+//		Scanner input = new Scanner(System.in);
+//		
+//		System.out.print("요소 수: ");
+//		int num = input.nextInt();
+//		
+//		double[] doubleList = new double[num];
+//		double sum = 0.0; 
+//		
+//		System.out.println("요소겂를 입력하세요.");
+//		for(int i = 0; i < doubleList.length; i++) {
+//			System.out.print("doubleList["+i+"] = ");
+//			double num2 = input.nextDouble();
+//			doubleList[i] = num2;
+//			
+//			sum += doubleList[i];
+//		}
+//		System.out.println(sum);
+//		System.out.println(sum/num);
+		
+//		Scanner input = new Scanner(System.in);
+//
+//		System.out.print("요소 수: ");
+//		int num = input.nextInt();
+//		
+//		int[] intList = new int[num];
+//		
+//		System.out.println("요소겂를 입력하세요.");
+//		for(int i = 0; i < intList.length; i++) {
+//			System.out.print("intList["+i+"] = ");
+//			int num2 = input.nextInt();
+//			intList[i] = num2;
+//		}
+//		for(int i = intList.length-1; i >= 0; i--) {
+//			System.out.println("찾고 싶은 값를 입력하세요.");
+//			int search = input.nextInt();
+//			
+//			if (search == intList[i]) {
+//				System.out.println("intList["+i+"] 에 위치해 있습니다");
+//				break;
+//			}
+//			else 
+//				continue;
+//		}
+//		input.close();
+		
+		
+//		System.out.print("사람 수: ");
+//		int num = input.nextInt();
+//		int[] scoreList = new int[num];
+//		int sum = 0;
+//		double avg = 0.0;
+//		int max = 0;
+//		int min = 0;
+//		
+//		System.out.println("점수를 입력하세요.");
+//		for (int i = 0; i<scoreList.length; i++) {
+//			System.out.print(i+1+"번 점수: ");
+//			int score = input.nextInt();
+//			scoreList[i] = score;
+//			
+//			sum += scoreList[i];
+//			avg = sum/(num*1.0);
+//			
+//		}
+//		System.out.println("합계 : "+ sum);
+//		System.out.println("평균 : "+ avg);
+//		
+//		max = scoreList[0];
+//		min = scoreList[0];
+//		for (int i = 1; i<scoreList.length; i++) {
+//			if (scoreList[i] - max > 0)
+//				max = scoreList[i];
+//			if (scoreList[i] - min < 0)
+//				min = scoreList[i];
+//			else
+//				continue;			
+//		}
+//		System.out.println("최대값 : " +max);
+//		System.out.println("최대값 : " +min);
 		
 		
 //		System.out.print("요소수 입력: ");
@@ -490,13 +565,6 @@ class a {
 //		}	
 //		System.out.println(x);
 		
-		
-		
-		
-		
-		
-		
-		
 //		System.out.print("정수 를 입력하세요. : ");
 //		int inp1 = sc.nextInt();
 //		
@@ -520,8 +588,6 @@ class a {
 //		
 		
 		
-		
-		
 //		int collect = 0;
 //		int num = rnd.nextInt(90)+10;
 //		System.out.println(num);
@@ -542,18 +608,6 @@ class a {
 //				collect = 1;
 //			}
 //		}while (collect == 0); 
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 //		int x;
 //		
