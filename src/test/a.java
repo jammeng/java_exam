@@ -8,22 +8,46 @@ class a {
 		Scanner input = new Scanner(System.in);
 		Random rnd = new Random();
 		
-		System.out.print("요소 수: ");
+		System.out.print("10 이하 요소 수: ");
 		int num = input.nextInt();
 		
-		int[] intList = new int[num];
-		intList[0] = rnd.nextInt(10)+1; // intList[0] 랜덤값 대입
+		int[] list = new int[num];
 		
-		for(int i = 1; i<intList.length; i++) { // i는 1부터 배열 길이 -1 까지
-			intList[i] = rnd.nextInt(10)+1; //intList[1] 랜덤값 대입
-			
-			while(intList[i-1] == intList[i]) {  //intList[i-1]과 intList[i]이 같을때 while문 실행
-				intList[i] = rnd.nextInt(10)+1; // intList[i] 랜덤값 다를때까지 대입
+		for(int i = 0; i < list.length; i++) {
+			int j;
+			do {
+				list[i] = rnd.nextInt(10)+1;
+				for(j = 0; j < i; j++) {
+					if(list[i]==list[j])
+						break;
+				}
+			}while(j<i);	
+				
+				
 			}
+				
+		
+		for(int i = 0; i<list.length; i++) {		// 배열 확인
+			System.out.println("intList["+i+"] = "+list[i]);
 		}
-		for(int i = 0; i<intList.length; i++) {
-			System.out.println("intList["+i+"] = "+intList[i]);
-		}
+			
+		
+//		System.out.print("요소 수: ");
+//		int num = input.nextInt();
+//				
+//		int[] intList = new int[num];
+//		intList[0] = rnd.nextInt(10)+1; // intList[0] 랜덤값 대입
+//		
+//		for(int i = 1; i<intList.length; i++) { // i는 1부터 배열 길이 -1 까지
+//			intList[i] = rnd.nextInt(10)+1; // intList[1] 랜덤값 대입
+//			
+//			while(intList[i-1] == intList[i]) {  // intList[i-1]과 intList[i]이 같을때 while문 실행
+//				intList[i] = rnd.nextInt(10)+1; // intList[i] 랜덤값 다를때까지 대입
+//			}
+//		}
+//		for(int i = 0; i<intList.length; i++) {		// 배열 확인
+//			System.out.println("intList["+i+"] = "+intList[i]);
+//		}
 		
 //		Scanner input = new Scanner(System.in);
 //		Random rnd = new Random();
