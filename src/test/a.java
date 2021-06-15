@@ -7,29 +7,107 @@ class a {
 
 		Scanner input = new Scanner(System.in);
 		Random rnd = new Random();
+		int stop = 1;
 		
-		System.out.print("10 이하 요소 수: ");
-		int num = input.nextInt();
+		String[] month = { "January", "February", "March", "April", "May", "June", "July", "August",
+						"September", "October", "November", "December"};
 		
-		int[] list = new int[num];
-		
-		for(int i = 0; i < list.length; i++) {
-			int j;
-			do {
-				list[i] = rnd.nextInt(10)+1;
-				for(j = 0; j < i; j++) {
-					if(list[i]==list[j])
-						break;
-				}
-			}while(j<i);	
-				
-				
+		retry: while(stop == 1) {
+			int rn_month = rnd.nextInt(12);	
+			int rn_month2 = rnd.nextInt(12);
+			
+			while(rn_month == rn_month2) {
+				rn_month2 = rnd.nextInt(12);
 			}
+			rn_month = rn_month2;
+			
+			err: while(true) {
+				System.out.println("해당 월의 영단어입력 (첫글자는 대문자 나머지는 소문자)");
 				
-		
-		for(int i = 0; i<list.length; i++) {		// 배열 확인
-			System.out.println("intList["+i+"] = "+list[i]);
+				System.out.print(rn_month+1+"월 : ");
+				String str = input.next();
+				
+				if(month[rn_month].equals(str)){
+					System.out.print("정답입니다. 다시하시겠습니까? (yes:1, no:0)");
+					stop = input.nextInt();
+					continue retry;
+				}
+				else {
+					System.out.println("떙!");	
+					continue err;
+				}
+			}
 		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		System.out.print("요소 수: ");
+//		int num = input.nextInt();
+//		
+//		int[] list = new int[num];
+//		int[] list2 = new int[num];
+//		
+//		for(int i = 0; i<list.length; i++) {
+//			System.out.print("list["+i+"] = ");
+//			list[i] = input.nextInt();
+//		}
+//		for (int i=0; i<num; i++) {
+//			list2[i] = list[(num-1)-i];
+//		}
+//		
+//		System.out.println("역순");
+//		for(int i = 0; i<list.length; i++) {
+//			System.out.println("list2["+i+"] = "+list2[i]);
+//		}		
+		
+//		System.out.print("요소 수: ");
+//		int num = input.nextInt();
+//		
+//		int[] list = new int[num];
+//		for(int i = 0; i<list.length; i++) {
+//			System.out.print("list["+i+"] = ");
+//			list[i] = input.nextInt();
+//		}for (int i=0; i<num; i++) {
+//			int rn1 = rnd.nextInt(num);
+//			int rn2 = rnd.nextInt(num);
+//			int t = list[rn1];
+//			list[rn1] = list[rn2];
+//			list[rn2] = t;
+//		}
+//		
+//		System.out.println("셔플");
+//		for(int i = 0; i<list.length; i++) {
+//			System.out.println("list["+i+"] = "+list[i]);
+//		}
+	
+//		System.out.print("10 이하 요소 수: ");
+//		int num = input.nextInt();
+//		
+//		int[] list = new int[num];
+//		
+//		for(int i = 0; i < list.length; i++) {
+//			int j;
+//			do {
+//				list[i] = rnd.nextInt(10)+1;
+//				for(j = 0; j < i; j++) {
+//					if(list[i]==list[j])
+//						break;
+//				}
+//			}while(j<i);	
+//				
+//				
+//			}
+//				
+//		
+//		for(int i = 0; i<list.length; i++) {		// 배열 확인
+//			System.out.println("intList["+i+"] = "+list[i]);
+//		}
 			
 		
 //		System.out.print("요소 수: ");
