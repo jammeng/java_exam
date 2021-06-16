@@ -7,45 +7,155 @@ class a {
 
 		Scanner input = new Scanner(System.in);
 		Random rnd = new Random();
-		int stop = 1;
+
+		int[][] arr1 = new int[4][3];
+ 		int[][] arr2 = new int[3][4];
+ 		int[][] arr3 = new int[4][4];
+ 		
+ 		System.out.println("arr1 입력");
+ 		for(int i=0; i<4; i++) {
+ 			for(int j=0; j<3; j++) {
+ 				System.out.print("arr1["+i+"]["+j+"]");
+ 				arr1[i][j] = input.nextInt();
+ 			}
+ 		}
+ 		System.out.println("arr2 입력");
+ 		for(int i=0; i<3; i++) {
+ 			for(int j=0; j<4; j++) {
+ 				System.out.print("arr2["+i+"]["+j+"]");
+ 				arr2[i][j] = input.nextInt();
+ 			}
+ 		}
+ 		
+ 		System.out.println("arr1");
+ 		for(int i=0; i<4; i++) {
+ 			for(int j=0; j<3; j++) {
+ 				System.out.print(arr1[i][j]+"\t");
+ 				}
+ 			System.out.println("");
+ 		}
+ 		System.out.println("arr2");
+ 		for(int i=0; i<3; i++) {
+ 			for(int j=0; j<4; j++) {
+ 				System.out.print(arr2[i][j]+"\t");
+ 				}
+ 			System.out.println("");
+ 		}
+ 		
+ 		for(int i=0; i<4; i++) {
+ 			for(int j=0; j<3; j++) {		
+ 				for(int h=0; h<4; h++) {
+ 				    arr3[i][h] += arr1[i][j]*arr2[j][h];
+ 				} 				
+ 			}
+ 		}
+ 		System.out.println("arr3");
+ 		for(int i=0; i<4; i++) {
+ 			for(int j=0; j<4; j++) {
+ 				System.out.print(arr3[i][j]+"\t");
+ 				}
+ 			System.out.println("");
+ 		}
 		
-		String[] month = { "January", "February", "March", "April", "May", "June", "July", "August",
-						"September", "October", "November", "December"};
-		
-		retry: while(stop == 1) {
-			int rn_month = rnd.nextInt(12);	
-			int rn_month2 = rnd.nextInt(12);
+//		int[][] arr1 = new int[2][2]; //4x3
+// 		int[][] arr2 = new int[2][2]; //3x4
+// 		int[][] arr3 = new int[2][2];
+// 		
+// 		System.out.println("arr1 입력");
+// 		for(int i=0; i<2; i++) {
+// 			for(int j=0; j<2; j++) {
+// 				System.out.print("arr1["+i+"]["+j+"]");
+// 				arr1[i][j] = input.nextInt();
+// 			}
+// 		}
+// 		System.out.println("arr2 입력");
+// 		for(int i=0; i<2; i++) {
+// 			for(int j=0; j<2; j++) {
+// 				System.out.print("arr2["+i+"]["+j+"]");
+// 				arr2[i][j] = input.nextInt();
+// 			}
+// 		}
+// 		//곱
+// 		for(int i=0; i<2; i++) {
+// 			int a1,b1,c1,d1;
+// 			
+// 			for(int j=0; j<2; j++) {
+// 				a1 = arr1[i][0];
+// 				b1 = arr2[0][j];
+// 				
+// 				c1 = arr1[i][1];
+// 				d1 = arr2[1][j];
+// 				arr3[i][j] = (a1*b1)+(c1*d1);
+// 				}
+// 			}
+//        System.out.println("답");
+//		for(int i=0; i<2; i++) {
+//			for(int j=0; j<2; j++) {
+//				System.out.println(arr3[i][j]);
+//			}
+//		}
 			
-			while(rn_month == rn_month2) {
-				rn_month2 = rnd.nextInt(12);
-			}
-			rn_month = rn_month2;
-			
-			err: while(true) {
-				System.out.println("해당 월의 영단어입력 (첫글자는 대문자 나머지는 소문자)");
-				
-				System.out.print(rn_month+1+"월 : ");
-				String str = input.next();
-				
-				if(month[rn_month].equals(str)){
-					System.out.print("정답입니다. 다시하시겠습니까? (yes:1, no:0)");
-					stop = input.nextInt();
-					continue retry;
-				}
-				else {
-					System.out.println("떙!");	
-					continue err;
-				}
-			}
-		}
-		
-		
-		
-		
-		
-		
-		
-		
+//		int stop = 1;
+//
+//		String[] day = { "sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"};
+//		String[] day2 = {"일","월","화","수","목","금","토"};
+//		
+//		retry: while(stop == 1) {
+//			int rn_day = rnd.nextInt(7);
+//			int rn_last_day = rnd.nextInt(7);
+//	
+//			while(rn_day == rn_last_day) {
+//				rn_day = rnd.nextInt(7);
+//			}
+//			rn_last_day = rn_day;
+//			
+//			wrong: while(true) {
+//				System.out.println("해당 요일의 영단어입력 (소문자)");   
+//				
+//				System.out.print(day2[rn_day]+"요일 : ");
+//				String str = input.next();
+//				
+//				if(day[rn_day].equals(str)){
+//					System.out.print("정답입니다. 다시하시겠습니까? (yes:1, no:0)");
+//					stop = input.nextInt();
+//					continue retry;
+//				}
+//				else {
+//					System.out.println("떙!");	
+//					continue wrong;
+//				}
+//			}
+//		}
+	
+//		String[] month = { "January", "February", "March", "April", "May", "June", "July", "August",
+//						"September", "October", "November", "December"};
+//		
+//		retry: while(stop == 1) {
+//			int rn_month = rnd.nextInt(12);	
+//			int rn_month2 = rnd.nextInt(12);
+//			
+//			while(rn_month == rn_month2) {
+//				rn_month2 = rnd.nextInt(12);
+//			}
+//			rn_month = rn_month2;
+//			
+//			err: while(true) {
+//				System.out.println("해당 월의 영단어입력 (첫글자는 대문자 나머지는 소문자)");
+//				
+//				System.out.print(rn_month+1+"월 : ");
+//				String str = input.next();
+//				
+//				if(month[rn_month].equals(str)){
+//					System.out.print("정답입니다. 다시하시겠습니까? (yes:1, no:0)");
+//					stop = input.nextInt();
+//					continue retry;
+//				}
+//				else {
+//					System.out.println("떙!");	
+//					continue err;
+//				}
+//			}
+//		}
 		
 //		System.out.print("요소 수: ");
 //		int num = input.nextInt();
