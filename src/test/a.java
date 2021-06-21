@@ -7,55 +7,155 @@ class a {
 
 		Scanner input = new Scanner(System.in);
 		Random rnd = new Random();
-
-		int[][] arr1 = new int[4][3];
- 		int[][] arr2 = new int[3][4];
- 		int[][] arr3 = new int[4][4];
- 		
- 		System.out.println("arr1 입력");
- 		for(int i=0; i<4; i++) {
- 			for(int j=0; j<3; j++) {
- 				System.out.print("arr1["+i+"]["+j+"]");
- 				arr1[i][j] = input.nextInt();
- 			}
- 		}
- 		System.out.println("arr2 입력");
- 		for(int i=0; i<3; i++) {
- 			for(int j=0; j<4; j++) {
- 				System.out.print("arr2["+i+"]["+j+"]");
- 				arr2[i][j] = input.nextInt();
- 			}
- 		}
- 		
- 		System.out.println("arr1");
- 		for(int i=0; i<4; i++) {
- 			for(int j=0; j<3; j++) {
- 				System.out.print(arr1[i][j]+"\t");
- 				}
- 			System.out.println("");
- 		}
- 		System.out.println("arr2");
- 		for(int i=0; i<3; i++) {
- 			for(int j=0; j<4; j++) {
- 				System.out.print(arr2[i][j]+"\t");
- 				}
- 			System.out.println("");
- 		}
- 		
- 		for(int i=0; i<4; i++) {
- 			for(int j=0; j<3; j++) {		
- 				for(int h=0; h<4; h++) {
- 				    arr3[i][h] += arr1[i][j]*arr2[j][h];
- 				} 				
- 			}
- 		}
- 		System.out.println("arr3");
- 		for(int i=0; i<4; i++) {
- 			for(int j=0; j<4; j++) {
- 				System.out.print(arr3[i][j]+"\t");
- 				}
- 			System.out.println("");
- 		}
+		
+		System.out.println("반 수 입력");
+		int num = input.nextInt();
+		int[][] arr = new int[num][];
+		int[] sum = new int[num];
+		double[] avg = new double[num];
+		int maxs = 0;
+		double maxa= 0.0;
+		
+		for(int i = 0 ; i < num; i++) {
+			System.out.println(i+1+"반 학생수 입력");
+			int stu = input.nextInt();
+			arr[i] = new int[stu];
+			
+			for (int j=0; j<arr[i].length; j++) {
+				System.out.printf("%d 반의 %d 번의 점수", i+1, j+1);
+				int grade = input.nextInt();
+				arr[i][j] = grade;
+			}
+		}
+		
+		System.out.println("반 \t | \t 합계 \t 평균");
+		System.out.println("------------------------------");
+		for(int i=0; i<num; i++) {
+			for (int j=0; j<arr[i].length; j++) {
+				sum[i] += arr[i][j];
+			}
+			avg[i] = (double)sum[i]/arr[i].length;
+			System.out.printf("%d반 \t | \t %d \t %.1f", i+1,  sum[i], (double)sum[i]/arr[i].length);
+			System.out.println("");
+		}
+		System.out.println("------------------------------");
+		for(int i=0; i<num; i++) {
+			maxs += sum[i];
+			maxa += avg[i];
+		}
+		System.out.printf("합 \t | \t %d \t %.1f", maxs, maxa/num);
+		
+		
+//		int col, row;
+//
+//		System.out.print("행 입력:");
+//		col = input.nextInt();
+//		int[][] arr = new int[col][];
+//		
+//		for(int i=0; i<col; i++) {
+//			System.out.print(i+"행의 열 수:");
+//			row = input.nextInt();
+//			arr[i] = new int[row];
+//			
+//		}
+//		
+//		System.out.println("각 요소의 값 입력");
+// 		for(int i=0; i<col; i++) {
+// 			for(int j=0; j<arr[i].length; j++) {
+// 				System.out.print("arr["+i+"]["+j+"]: ");
+// 				arr[i][j] = input.nextInt();
+// 			}
+// 		}
+// 		System.out.println("각 요소의 값 출력");
+// 		for(int i=0; i<col; i++) {
+// 			for(int j=0; j<arr[i].length; j++) {
+// 				System.out.print(arr[i][j]+"\t");
+// 			}
+// 			System.out.println("");
+// 		}
+		
+//		int sum = 0;
+//		double lang = 0;
+//		double math = 0;
+//		
+//		int[][] grade = new int[6][2];
+//		System.out.println("6명의 국어, 수학점수 입력");
+//		for(int i=0; i<6; i++) {
+//			System.out.print(i+1+"번 ");
+//			for(int j=0; j<2; j++) {
+//				if(j==0) {
+//					System.out.print("국어: ");
+//					grade[i][j] = input.nextInt();
+//					lang += grade[i][j];
+//					
+//				}
+//				else if(j==1) {
+//					System.out.print("   수학: ");
+//					grade[i][j] = input.nextInt();
+//					math += grade[i][j];
+//				}
+// 			}
+// 		}
+//		System.out.println("No.\t국어\t수학\t평균");
+// 		for(int i=0; i<6; i++) {
+// 			System.out.print(i+1+"\t");
+// 			for(int j=0; j<2; j++) {
+// 				System.out.print(grade[i][j]+"\t");
+// 				sum += grade[i][j];
+// 				}
+// 			System.out.println(sum/2f);
+// 			sum = 0;
+// 		}
+// 		System.out.printf("평균\t%.1f\t%.1f", lang/6, math/6);
+		
+//		int[][] arr1 = new int[4][3];
+// 		int[][] arr2 = new int[3][4];
+// 		int[][] arr3 = new int[4][4];
+// 		
+// 		System.out.println("arr1 입력");
+// 		for(int i=0; i<4; i++) {
+// 			for(int j=0; j<3; j++) {
+// 				System.out.print("arr1["+i+"]["+j+"]");
+// 				arr1[i][j] = input.nextInt();
+// 			}
+// 		}
+// 		System.out.println("arr2 입력");
+// 		for(int i=0; i<3; i++) {
+// 			for(int j=0; j<4; j++) {
+// 				System.out.print("arr2["+i+"]["+j+"]");
+// 				arr2[i][j] = input.nextInt();
+// 			}
+// 		}
+// 		
+// 		System.out.println("arr1");
+// 		for(int i=0; i<4; i++) {
+// 			for(int j=0; j<3; j++) {
+// 				System.out.print(arr1[i][j]+"\t");
+// 				}
+// 			System.out.println("");
+// 		}
+// 		System.out.println("arr2");
+// 		for(int i=0; i<3; i++) {
+// 			for(int j=0; j<4; j++) {
+// 				System.out.print(arr2[i][j]+"\t");
+// 				}
+// 			System.out.println("");
+// 		}
+// 		
+// 		for(int i=0; i<4; i++) {
+// 			for(int j=0; j<3; j++) {		
+// 				for(int h=0; h<4; h++) {
+// 				    arr3[i][h] += arr1[i][j]*arr2[j][h];
+// 				} 				
+// 			}
+// 		}
+// 		System.out.println("arr3");
+// 		for(int i=0; i<4; i++) {
+// 			for(int j=0; j<4; j++) {
+// 				System.out.print(arr3[i][j]+"\t");
+// 				}
+// 			System.out.println("");
+// 		}
 		
 //		int[][] arr1 = new int[2][2]; //4x3
 // 		int[][] arr2 = new int[2][2]; //3x4
