@@ -1,5 +1,6 @@
 package test;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Exmethod {
 	
@@ -88,9 +89,58 @@ public class Exmethod {
 		}
 	}
 	
+	//7-7
+	public static String putChar(int n) {
+		String str = "";
+		for(int i = 1; i<= n; i++) {
+			str += "c"; 
+		}
+		return str;
+	}
+
+	public static void putStars(char ch,int n) {
+		for(int i = 1; i<= n; i++) {
+			for(int j = 1; j<= putChar(i).length(); j++) {
+				System.out.print(ch);
+			}
+			System.out.println("");
+		}
+	}
+	
+	//7-8
+	public static void random(int a, int b) {
+		Random rnd = new Random();
+		if(b<=a)
+			System.out.println(a);
+		else
+			System.out.println(a + rnd.nextInt(b-(a-1)));
+	}
+	
+	//7-9
+	public static int readPlusInt(int num) {
+		int reverse = 0;
+		while(num != 0 ) {
+			reverse = reverse * 10 + num % 10;
+			num /= 10;
+		}
+		return reverse;
+	}
+	
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		int num = input.nextInt();
-		System.out.println(printSeason(num));
+		int num = 0;
+		int retry = 1;
+		
+		while(retry==1) {
+			do {
+				System.out.print("양의 정수값 입력: ");
+				num = input.nextInt();
+			}
+			while(num <= 0);
+			
+			System.out.println("반대로 반환 결과: " + readPlusInt(num));
+			System.out.print("다시한번?(1:yes, 0:no): ");
+			retry = input.nextInt();
+		}
 	}
 }
