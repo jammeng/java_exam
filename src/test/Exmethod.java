@@ -3,6 +3,8 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Exmethod {
+	static Random rnd = new Random();
+	static Scanner input = new Scanner(System.in);
 	
 	//7-1
 	public static int signOf(int num) {
@@ -126,21 +128,68 @@ public class Exmethod {
 		return reverse;
 	}
 	
-	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		int num = 0;
-		int retry = 1;
+	//7-10
+	public static void rndmath(int num) {
 		
-		while(retry==1) {
-			do {
-				System.out.print("양의 정수값 입력: ");
-				num = input.nextInt();
-			}
-			while(num <= 0);
-			
-			System.out.println("반대로 반환 결과: " + readPlusInt(num));
-			System.out.print("다시한번?(1:yes, 0:no): ");
+		
+	}
+	
+	public static boolean confirmRetry() {
+		int retry = 0;
+		do {
+			System.out.print("다시? yes:1, no:0");
 			retry = input.nextInt();
-		}
+		} while(retry != 1 && retry != 0);
+		return retry == 1;
+	}
+	
+	public static void main(String[] args) {
+
+		int retry = 0;
+		do {
+			int rnnum1 = rnd.nextInt(900) + 100;
+			int rnnum2 = rnd.nextInt(900) + 100;
+			int rnnum3 = rnd.nextInt(900) + 100;
+			int rnmath = rnd.nextInt(4);
+			
+			int result = 0;
+			int in;
+			
+			switch (rnmath) {
+			case 0: {
+				result = rnnum1 + rnnum2 + rnnum3; break;
+			}
+			case 1: {
+				result = rnnum1 + rnnum2 - rnnum3; break;
+			}
+			case 2: {
+				result = rnnum1 - rnnum2 + rnnum3; break;
+			}
+			case 3: {
+				result = rnnum1 - rnnum2 - rnnum3; break;
+			}
+			}
+			while(true) {
+				System.out.print(
+						rnnum1 + ( (rnmath<2)? "+" : "-" )+ 
+						rnnum2 + ( (rnmath%2==0)? "+" : "-" ) + 
+						rnnum3 + " = "
+				);
+				
+				in = input.nextInt();
+				if(result == in) {
+					System.out.println("정답!");
+					break;
+				}
+				else {
+					System.out.println("오답!");
+				}
+			}
+		}while(confirmRetry());
+		
+		
+		
+		
+		
 	}
 }
