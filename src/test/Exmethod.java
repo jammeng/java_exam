@@ -128,12 +128,7 @@ public class Exmethod {
 		return reverse;
 	}
 	
-	//7-10
-	public static void rndmath(int num) {
-		
-		
-	}
-	
+	//7-10	
 	public static boolean confirmRetry() {
 		int retry = 0;
 		do {
@@ -143,52 +138,42 @@ public class Exmethod {
 		return retry == 1;
 	}
 	
+	//7-11
+	public static int[] pow2(int x, int y) {
+		int[] arr = {x, x};
+		
+		for(int j=0; j<y; j++) {
+			arr[0] *= 2;
+		}
+		for(int j=0; j<y; j++) {
+			arr[1] /= 2;
+		}
+		return arr;
+	}
+	
+	//7-12
+	public static int rotateRight(int x, int n) {
+		for(int j=0; j<n; j++) {
+			x *= 2;
+		}
+		return x;
+	}
+	
+	public static int rotateLeft(int x, int n) {
+		for(int j=0; j<n; j++) {
+			x /= 2;
+		}
+		return x;
+	}
+	
+	
 	public static void main(String[] args) {
-
-		int retry = 0;
-		do {
-			int rnnum1 = rnd.nextInt(900) + 100;
-			int rnnum2 = rnd.nextInt(900) + 100;
-			int rnnum3 = rnd.nextInt(900) + 100;
-			int rnmath = rnd.nextInt(4);
-			
-			int result = 0;
-			int in;
-			
-			switch (rnmath) {
-			case 0: {
-				result = rnnum1 + rnnum2 + rnnum3; break;
-			}
-			case 1: {
-				result = rnnum1 + rnnum2 - rnnum3; break;
-			}
-			case 2: {
-				result = rnnum1 - rnnum2 + rnnum3; break;
-			}
-			case 3: {
-				result = rnnum1 - rnnum2 - rnnum3; break;
-			}
-			}
-			while(true) {
-				System.out.print(
-						rnnum1 + ( (rnmath<2)? "+" : "-" )+ 
-						rnnum2 + ( (rnmath%2==0)? "+" : "-" ) + 
-						rnnum3 + " = "
-				);
-				
-				in = input.nextInt();
-				if(result == in) {
-					System.out.println("정답!");
-					break;
-				}
-				else {
-					System.out.println("오답!");
-				}
-			}
-		}while(confirmRetry());
-		
-		
-		
+		System.out.println(1>>3);
+		System.out.println("정수 x를 n비트 시프트 합니다.");
+		System.out.print("x: ");
+		int x = input.nextInt();
+		System.out.print("n: ");
+		int n = input.nextInt();
 		
 		
 	}
