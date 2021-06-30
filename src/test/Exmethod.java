@@ -166,15 +166,132 @@ public class Exmethod {
 		return x;
 	}
 	
+	//7-13
+		public static void printBits(int x) {
+			for(int i = 31 ; i >= 0; i--) {
+//				System.out.print((x >>> i & 1) == 1? '1' : '0');
+				if ((x >>> i & 1) == 1) {
+					System.out.print('1');
+				}
+				else {
+					System.out.print('0');
+				}
+				
+			}
+		}
+		
+		public static int set(int x , int pos) {
+			return x|(1<<pos);
+		}
+		
+		public static int reset(int x , int pos) {
+			return x & ~(1<<pos);
+		}
+		
+		public static int inverse(int x , int pos) {
+			return x ^ (1<<pos);
+		}
+		
+		//7-15
+		public static int sumOf(int[] x) {
+			int sum = 0;
+			for (int i = 0; i<x.length; i++) {
+				sum += x[i];
+			}
+			return sum;
+		}
+		
+		//7-16
+		public static int[] minOf(int[][] x) {
+			int[] newarr = {x[0][0], x[0][1]};
+			
+			for (int i = 0; i<x.length; i++) {
+				if (x[i][0] > newarr[0]) {
+					newarr[0] = x[i][0];
+				}
+				if(x[i][1] < newarr[1]) {
+					newarr[1] = x[i][1];
+				} 
+			}
+			return newarr;
+		}
+	
+	//-----------
+	//7-17
+	public static int linearSearch(int key, int[] arr) {
+		for (int i=0; i<arr.length; i++) {
+			if(arr[i] == key) 
+				return i;			
+		}
+		return -1;
+	}
+	
+	public static int linearSearchR(int key, int[] arr) {
+		for (int i=arr.length-1; i>=0; i--) {
+			if(arr[i] == key) 
+				return i;			
+		}
+		return -1;
+	}
+	
+	//7-18
+	public static int[] aryRmv(int idx, int[] arr) {
+		for (int i=idx; i<arr.length-1; i++) {
+				arr[idx] = arr[idx+1];
+		}return arr;
+	}
+	
+	//7-20
+	public static void insertArray(int innum, int idx, int[] arr) {
+		if(idx>=0 && idx<arr.length) {
+			for (int i=arr.length-1; i>idx; i--) {
+				arr[i] = arr[i-1];
+
+			}
+			arr[idx] = innum;
+		}
+
+	}
+	
+	//7-21
+	public static void exchangeArray(int[] arr1, int[] arr2) {
+
+		int length = arr1.length;
+		if (arr1.length > arr2.length)
+			length = arr2.length;
+		
+		int[] mem = new int[length];
+		for(int i=0; i<length; i++) {
+			mem[i] = arr1[i];
+			arr1[i] = arr2[i];
+			arr2[i] = mem[i];
+		}	
+	}
+	
+	//7-22
+	public static int[] cloneArray(int[] arr) {
+		int[] cloneArr = new int[arr.length];
+		for(int i = 0; i<arr.length; i++) {
+			cloneArr[i] = arr[i];
+		}
+		return cloneArr;
+	}
 	
 	public static void main(String[] args) {
-		System.out.println(1>>3);
-		System.out.println("정수 x를 n비트 시프트 합니다.");
-		System.out.print("x: ");
+		System.out.print("배열 arr의 요소수: ");
 		int x = input.nextInt();
-		System.out.print("n: ");
-		int n = input.nextInt();
+		int[] arr = new int[x];
 		
+		for(int i = 0; i<arr.length; i++) {
+			System.out.printf("arr[%d]: ", i);
+			arr[i] = input.nextInt();
+		}
 		
+		System.out.println("배열 arr 을 복사해서 배열 arr2 생성");
+		int[] arr2 = cloneArray(arr);
+		
+		for(int i = 0; i<arr2.length; i++) {
+			System.out.printf("arr2[%d]: %d \n", i, arr2[i]);
+		}
 	}
 }
