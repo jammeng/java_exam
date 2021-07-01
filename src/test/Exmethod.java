@@ -276,6 +276,53 @@ public class Exmethod {
 		}
 		return cloneArr;
 	}
+	//7-23
+	public static int[] removeArray(int[] arr, int pos) {
+		if (pos < 0 || pos > arr.length) {
+			return arr;
+		} else {
+			int[] removeArr = new int[arr.length - 1];
+			int cnt = 0;
+			for(int i = 0; i<arr.length; i++) {
+				if (pos == i) { 
+					cnt++; 
+					continue;
+				}
+				
+				if(cnt>0) { removeArr[i] = arr[i+1]; }
+				else { removeArr[i] = arr[i]; }
+			}
+			return removeArr;
+		}
+	}
+	
+	//7-24
+	public static int[] searchArrayIdx(int[] arr, int val) {
+		int cnt = 0; // 검색하고자하는 값의 개수
+		for(int i = 0; i<arr.length; i++) {
+			if(arr[i] == val) {
+				cnt++;
+			}
+		}
+		int[] searchArr = new int[cnt]; //값의 개수만큼의 길이로 배열 생성
+//--
+//		int pos = 0; // 반환할 배열의 인덱스 값
+//		for(int i = 0; i<arr.length; i++) {
+//				if(arr[i] == val) {
+//					searchArr[pos] = i;
+//					pos++;
+//				}
+//		}
+//--
+		cnt--;
+		for(int i = arr.length-1; cnt>=0; i-- ) {
+			if(arr[i] == val) {
+				searchArr[cnt] = i;
+				cnt--;
+			}
+		}
+		return searchArr;
+	}
 	
 	public static void main(String[] args) {
 		System.out.print("배열 arr의 요소수: ");
@@ -287,9 +334,13 @@ public class Exmethod {
 			arr[i] = input.nextInt();
 		}
 		
-		System.out.println("배열 arr 을 복사해서 배열 arr2 생성");
-		int[] arr2 = cloneArray(arr);
+		System.out.print("배열 arr의 검색할 요소: ");
+		int val = input.nextInt();
 		
+		
+		System.out.println("해당 요소를 검색한 배열");
+		int[] arr2 = searchArrayIdx(arr, val);
+		 
 		for(int i = 0; i<arr2.length; i++) {
 			System.out.printf("arr2[%d]: %d \n", i, arr2[i]);
 		}
