@@ -324,25 +324,81 @@ public class Exmethod {
 		return searchArr;
 	}
 	
+	//7-25
+	public static int[] insertArrayOf(int[] arr, int pos, int val) {
+		if(pos < 0 || pos > arr.length) {
+			return arr;
+		}else {
+//			int cnt = 0;
+//			int[] insertArr = new int[arr.length+1];
+//			for (int i = 0; i<arr.length; i++) {
+//				if(i==pos) {
+//					insertArr[i] = val;
+//					cnt++;
+//					insertArr[i+1] = arr[i];
+//				}
+//				else if(cnt == 1)
+//					insertArr[i+1] = arr[i];
+//				else
+//					insertArr[i] = arr[i];
+//			}
+			int[] insertArr = new int[arr.length+1];
+			int i = 0;
+			for(;i<pos; i++) {
+				insertArr[i] = arr[i];
+			}
+			insertArr[pos] = val;
+			for(;i<arr.length; i++) {
+				insertArr[i+1] = arr[i];
+			}
+			
+			return insertArr;
+		}
+	}
+	
+	//7-31
+	public static void absolute(int x) {
+		if (x<0)
+			x = -x;
+		
+		System.out.println("int형 절대값: "+x);
+	}
+	public static void absolute(long x) {
+		if (x<0)
+			x = -x;
+		
+		System.out.println("long형 절대값: "+x);
+	}
+	public static void absolute(float x) {
+		if (x<0)
+			x = (-x);
+		
+		System.out.println("float형 절대값: "+x);
+	}
+	public static void absolute(double x) {
+		if (x<0)
+			x = -x;
+		
+		System.out.println("double형 절대값: "+x);
+	}
+		
+	
 	public static void main(String[] args) {
-		System.out.print("배열 arr의 요소수: ");
+		System.out.print("int형 정수값: ");
 		int x = input.nextInt();
-		int[] arr = new int[x];
+
+		System.out.print("long형 정수값: ");
+		long y = input.nextLong();
 		
-		for(int i = 0; i<arr.length; i++) {
-			System.out.printf("arr[%d]: ", i);
-			arr[i] = input.nextInt();
-		}
+		System.out.print("float형 정수값: ");
+		float z = input.nextFloat();
 		
-		System.out.print("배열 arr의 검색할 요소: ");
-		int val = input.nextInt();
+		System.out.print("double형 정수값: ");
+		double w = input.nextDouble();
 		
-		
-		System.out.println("해당 요소를 검색한 배열");
-		int[] arr2 = searchArrayIdx(arr, val);
-		 
-		for(int i = 0; i<arr2.length; i++) {
-			System.out.printf("arr2[%d]: %d \n", i, arr2[i]);
-		}
+		absolute(x);
+		absolute(y);
+		absolute(z);
+		absolute(w);
 	}
 }
